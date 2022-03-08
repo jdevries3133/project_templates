@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,node
 
-### Django ###
+# Django 
 *.log
 *.pot
 *.pyc
@@ -10,6 +10,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
+
 
 # this is what the static root is configured to be, by default
 staticfiles
@@ -44,3 +45,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+
+# terraform
+.terraform*

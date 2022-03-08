@@ -2,7 +2,6 @@
 
 services:
   web:
-    image: registry/project_name:tag
     build: .
     ports:
       - "8000:8000"

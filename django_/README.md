@@ -25,3 +25,11 @@ technologies I normally use to support my project.
   - automated deployment to a Kubernetes cluster
 - Dockerfile and docker-compose config. **The docker-compose config is designed
   for DEVELOPMENT PURPOSES ONLY.**
+
+# Setup
+
+1. In the Makefile, update the `CONTAINER_NAME`, as well as `DOCKER_ACCOUNT` if
+   you are not me :)
+2. Rename the `django_` folder to something appropriate for your project, and
+   update various strings in `django_/settings/base.py` until Django no longer
+   blows up. Things like `ROOT_URLCONF` and `WSGI_APPLICATION` must be updated.
