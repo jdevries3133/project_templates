@@ -1,8 +1,8 @@
 #!/bin/sh
 
-python3 manage.py migrate
+python3 manage.py migrate --no-input
 
-exec gunicorn --access-logfile - \
+exec gunicorn \
     --workers 3 \
     --bind 0.0.0.0:8000 \
-    fast_grader.wsgi:application
+    django_.wsgi:application

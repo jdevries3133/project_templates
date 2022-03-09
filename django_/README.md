@@ -19,17 +19,17 @@ technologies I normally use to support my project.
 
 ## Surrounding Django
 
-- GitHub actions for:
-  - code formatting checks via [black](https://github.com/psf/black)
-  - automated testing
-  - automated deployment to a Kubernetes cluster
 - Dockerfile and docker-compose config. **The docker-compose config is designed
   for DEVELOPMENT PURPOSES ONLY.**
+- Makefile for testing, pushing containers, and deploying. This makes creating
+  CI/CD pipelines trivial.
 
 # Setup
 
 1. In the Makefile, update the `CONTAINER_NAME`, as well as `DOCKER_ACCOUNT` if
    you are not me :)
-2. Rename the `django_` folder to something appropriate for your project, and
-   update various strings in `django_/settings/base.py` until Django no longer
-   blows up. Things like `ROOT_URLCONF` and `WSGI_APPLICATION` must be updated.
+2. Rename the `django_` folder to something appropriate for your project,
+3. Peruse and update update `django_/settings/base.py`. In particular, Django
+   will blow up after renaming the `django_` folder until things like
+   `ROOT_URLCONF` and `WSGI_APPLICATION` are be updated.
+4. Update the entrypoint scripts, which reference the wsgi module.
